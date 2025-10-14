@@ -1,0 +1,25 @@
+.nav-tabs {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #dee2e6;
+    display: flex;
+}
+
+.nav-tab {
+    border: none;
+    background: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: -2px;
+}
+
+.nav-tab.active {
+    border: 2px solid #dee2e6;
+    border-bottom: 2px solid #f8f9fa;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+}
+
+.view-content.hidden {
+    display: none;
+}
