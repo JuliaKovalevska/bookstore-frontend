@@ -3,13 +3,10 @@ $(document).ready(function() {
 
     $('.nav-tab').on('click', function() {
         currentView = $(this).data('view');
-
         $('.nav-tab').removeClass('active');
         $(this).addClass('active');
-
         $('.view-content').addClass('hidden');
         $('#' + currentView + '-view').removeClass('hidden');
-
         loadDataForCurrentView();
     });
 
@@ -48,6 +45,13 @@ $(document).ready(function() {
             });
         });
     }
+
+    $('#logout-btn').on('click', function() {
+        localStorage.removeItem('accessToken');
+        localStorage.removeItem('refreshToken');
+        alert('You have been logged out.');
+        window.location.href = 'login.html';
+    });
 
     function clearForm(view) {
         $(`#${view}-form`)[0].reset();

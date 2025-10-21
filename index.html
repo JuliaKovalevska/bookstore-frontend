@@ -7,7 +7,20 @@
 </head>
 <body>
 
+    <script>
+        const accessToken = localStorage.getItem('accessToken');
+        if (!accessToken) {
+            window.location.href = 'login.html';
+        }
+    </script>
+
+<header class="main-header">
     <h1>Bookstore Manager</h1>
+    <div class="user-info">
+        <span id="username-display"></span>
+        <button id="logout-btn">Logout</button>
+    </div>
+</header>
 
     <nav class="nav-tabs">
         <button class="nav-tab active" data-view="books">Books</button>
